@@ -118,6 +118,8 @@
 
       &-open {
         transform: scale(80);
+        height: 100vh;
+        overflow: hidden;
       }
 
       // transform: scale(80);
@@ -131,7 +133,7 @@
 
   &__nav {
     @include respond(tab-land) {
-      height: 100vh;
+      height: 95vh;
 
       position: fixed;
       top: 0;
@@ -148,6 +150,7 @@
         opacity: 1;
         width: 100%;
         visibility: visible;
+        overflow: hidden;
       }
     }
   }
