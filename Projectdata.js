@@ -6,7 +6,6 @@ let resumeData = {
     quality: [
       "Frontend Developer",
       "Web Designer",
-      "Data Scientist",
       "Javascript Engineer",
       "React JS Developer",
       "Wordpress Expert",
