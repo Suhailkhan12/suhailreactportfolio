@@ -14,7 +14,7 @@ function Header() {
   }
 
   useEffect(() => {
-    const element = document.getElementById("root");
+    const element = document.getElementById("personal__portfolio");
     if (menushow === false) {
       element.style.overflow = "hidden";
     } else {
