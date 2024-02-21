@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./header.scss";
 import Headroom from "react-headroom";
 import Socialicon from "../Socialicon/Socialicon";
@@ -12,6 +12,14 @@ function Header() {
   function handleToggleNav() {
     setmenuShow((s) => !s);
   }
+
+  useEffect(() => {
+    if (menushow === false) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "scroll";
+    }
+  }, [menushow]);
 
   return (
     <>
