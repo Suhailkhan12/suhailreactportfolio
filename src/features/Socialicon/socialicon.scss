@@ -34,6 +34,12 @@
       font-size: 3rem;
       color: var(--color-white-1);
       transition: transform 0.2s;
+      z-index: 6;
+
+      a {
+        display: inherit;
+        color: var(--color-white-2);
+      }
 
       &:hover {
         transform: translateX(0.3rem);
@@ -49,30 +55,37 @@
       }
     }
 
+    &--icon:hover + &--name {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
     &--name {
       background-color: var(--color-grey-dark-2);
       color: var(--color-white-1);
       padding: 0.5rem 1rem 0.5rem 2rem;
       --webkit-clip-path: polygon(
         0 50%,
-        10% 20%,
-        10% 0,
+        15% 20%,
+        15% 0,
         100% 0,
         100% 100%,
-        10% 100%,
-        10% 80%,
+        15% 100%,
+        15% 80%,
         0 50%
       );
       clip-path: polygon(
         0 50%,
-        10% 20%,
-        10% 0,
+        15% 20%,
+        15% 0,
         100% 0,
         100% 100%,
-        10% 100%,
-        10% 80%,
+        15% 100%,
+        15% 80%,
         0 50%
       );
+      z-index: 5;
 
       @include respond(tab-land) {
         display: none;
@@ -81,11 +94,7 @@
       transform: translateX(-5rem);
       opacity: 0;
       transition: all 0.3s;
-    }
-
-    &:hover &--name {
-      transform: translateX(0);
-      opacity: 1;
+      visibility: hidden;
     }
   }
 }

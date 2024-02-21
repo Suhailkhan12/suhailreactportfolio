@@ -118,7 +118,6 @@
 
       &-open {
         transform: scale(80);
-        overflow: hidden;
       }
 
       // transform: scale(80);
@@ -146,11 +145,9 @@
       transition: all 0.8s cubic-bezier(0, 1.04, 0.49, 1.01);
 
       &-open {
-        height: 95vh;
         opacity: 1;
         width: 100%;
         visibility: visible;
-        overflow: hidden;
       }
     }
   }

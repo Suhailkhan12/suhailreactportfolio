@@ -15,7 +15,7 @@ function Hero({ intro }) {
         <br />
         <ReactTyped strings={quality} typeSpeed={40} backSpeed={50} loop />
       </h1>
-      <p className="hero__para heading-4 heading-4--dark">{description}</p>
+      <p className="hero__para paragraph heading-4--dark">{description}</p>
       <Link to="project__id" smooth={true} className=" btn">
         Portfolio
       </Link>

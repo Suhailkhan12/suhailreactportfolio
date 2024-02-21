@@ -1,12 +1,26 @@
 @import "../../sass/mixins.scss";
 
 .hero {
-  grid-column: center-start / center-end;
+  grid-column: full-start / full-end;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   row-gap: 1rem;
+  padding: 0 9rem;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-body-dark, 0.7),
+      rgba($color-body-light, 0.7)
+    ),
+    url(../../assets/backtwo.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include respond(tab-land) {
+    padding: 0 3rem;
+  }
 
   &__heading {
     margin-bottom: 1rem;
@@ -15,6 +29,7 @@
   &__subheading {
     line-height: 1;
     color: var(--color-primary);
+    font-family: $font-display-one;
   }
 
   &__para {

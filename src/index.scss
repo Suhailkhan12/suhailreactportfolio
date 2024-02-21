@@ -52,11 +52,12 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  // font-family: "Open Sans", sans-serif;
+  font-family: "Anta", sans-serif;
   font-weight: 400;
   line-height: 1.6;
   color: var(--color-grey-dark-1);
-  background-color: #f8fafc;
+  background-color: $color-body-light;
 }
 
 a {
@@ -122,6 +123,7 @@ a {
   @extend %heading;
   font-size: 1.7rem;
   line-height: 1.6;
+  font-family: $font-display-para;
 
   &:not(:last-child) {
     margin-bottom: 2rem;
