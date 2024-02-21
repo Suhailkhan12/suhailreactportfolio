@@ -6,6 +6,7 @@ import Project from "../features/Project/Project";
 import WhatIdo from "../features/WhatIdo/WhatIdo";
 import Footer from "../features/Footer/Footer";
 import Gmail from "../features/Gmail/Gmail";
+import Getintouch from "../features/Getintouch/Getintouch";
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
       <About about={resumeData.about} />
       <WhatIdo whatdata={resumeData.whatidoref} />
       <Project projectdata={resumeData.projectdata} />
+      <Getintouch />
       <Footer footerdata={resumeData.footercontent} />
       <Gmail />
     </main>

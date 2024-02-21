@@ -13,7 +13,9 @@ function Hero({ intro }) {
       <h1 className="heading-1 hero__heading">
         {name}.
         <br />
+        <span>{"<"}</span>
         <ReactTyped strings={quality} typeSpeed={40} backSpeed={50} loop />
+        <span>{"/>"}</span>
       </h1>
       <p className="hero__para paragraph heading-4--dark">{description}</p>
       <Link to="project__id" smooth={true} className=" btn">

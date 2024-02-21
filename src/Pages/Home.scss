@@ -16,4 +16,12 @@
   @include respond(phone) {
     grid-template-rows: 50vh min-content;
   }
+
+  @include respond(miniphone) {
+    grid-template-rows: 50vh min-content;
+    grid-template-columns:
+      [full-start] minmax(0, 1fr)
+      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end] minmax(0, 1fr) [full-end];
+  }
 }

@@ -1,10 +1,17 @@
 // $color-body-light: #f8fafc; #eef8eb;
 $color-body-light: #f2f8f1;
 $color-body-dark: #e0ebf7;
+$color-white: #fff;
 $font-display-one: "Cedarville Cursive", cursive;
 $font-display-para: "Poppins", sans-serif;
 
 @mixin respond($breakpoint) {
+  @if $breakpoint == miniphone {
+    @media only screen and (max-width: 23.75em) {
+      @content;
+    } // 500px / 16px = 37.5em
+  }
+
   @if $breakpoint == phone {
     @media only screen and (max-width: 31.25em) {
       @content;
