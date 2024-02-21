@@ -64,12 +64,22 @@ function Header() {
           >
             <ul className="navigation__list">
               <li className="navigation__item">
-                <Link to="about__id" smooth={true} className="navigation__link">
+                <Link
+                  to="about__id"
+                  smooth={true}
+                  onClick={handleToggleNav}
+                  className="navigation__link"
+                >
                   About Me
                 </Link>
               </li>
               <li className="navigation__item">
-                <Link to="skill__id" smooth={true} className="navigation__link">
+                <Link
+                  to="skill__id"
+                  smooth={true}
+                  onClick={handleToggleNav}
+                  className="navigation__link"
+                >
                   SKill
                 </Link>
               </li>
@@ -77,6 +87,7 @@ function Header() {
                 <Link
                   to="project__id"
                   smooth={true}
+                  onClick={handleToggleNav}
                   className="navigation__link"
                 >
                   My Project
