@@ -14,10 +14,11 @@ function Header() {
   }
 
   useEffect(() => {
+    const element = document.getElementById("root");
     if (menushow === false) {
-      document.body.style.overflow = "hidden";
+      element.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "scroll";
+      element.style.overflow = "scroll";
     }
   }, [menushow]);
 
