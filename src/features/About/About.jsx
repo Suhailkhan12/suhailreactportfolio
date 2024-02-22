@@ -9,13 +9,15 @@ function About({ about }) {
       <section className="content" id="about__id">
         <h2 className="heading-2 mb-lg">{aboutdesc}</h2>
         {paragraph.map((par) => (
-          <p className="paragraph">{par}</p>
+          <p className="paragraph" key={par}>
+            {par}
+          </p>
         ))}
 
         <div className="content__skill">
           <div className="content__skill--1">
             {skillone.map((skill) => (
-              <span className="content__skill--name heading-4">
+              <span className="content__skill--name heading-4" key={skill}>
                 <div className="content__skill--icon">
                   <HiArrowRightCircle />
                 </div>
@@ -25,7 +27,7 @@ function About({ about }) {
           </div>
           <div className="content__skill--2">
             {skilltwo.map((skill) => (
-              <span className="content__skill--name heading-4">
+              <span className="content__skill--name heading-4" key={skill}>
                 <div className="content__skill--icon">
                   <HiArrowRightCircle />
                 </div>

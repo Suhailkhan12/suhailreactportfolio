@@ -37,13 +37,13 @@ function Socialicon() {
   return (
     <div className="socialicon__position">
       {social.map((item) => (
-        <figure className="socialicon__content">
+        <figure className="socialicon__content" key={item.name}>
           <span
             className="socialicon__content--icon"
             style={{ backgroundColor: item.bgcolor }}
           >
             <a href={item.link} target="blank">
-              {item.icon}{" "}
+              {item.icon}
             </a>
           </span>
 

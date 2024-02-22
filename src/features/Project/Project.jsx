@@ -3,12 +3,12 @@ import "./project.scss";
 import Projectcard from "./Projectcard";
 
 function Project({ projectdata }) {
-  const [visible, setVisible] = useState(2);
+  const [visible, setVisible] = useState(3);
   const [btnstate, setBtnstate] = useState(true);
 
   function showClickProject() {
-    if (visible !== projectdata.length) {
-      setVisible((prev) => prev + 1);
+    if (visible <= projectdata.length) {
+      setVisible((prev) => prev + 3);
     } else {
       setBtnstate(false);
     }

@@ -12,7 +12,7 @@ function Projectcard({ data }) {
               Skill Used
             </h3>
             {technolgy.map((item) => (
-              <span className="project__fig__content--image">
+              <span className="project__fig__content--image" key={item.name}>
                 <img src={item.imageURL} alt="" />
                 {item.name}
               </span>

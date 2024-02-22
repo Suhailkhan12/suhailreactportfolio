@@ -43,7 +43,7 @@ function Getintouch() {
                     required: "This field required",
                   })}
                 />
-                <label for="name" className="form__label">
+                <label htmlFor="name" className="form__label">
                   Full name
                 </label>
                 {errors?.name?.message && (
@@ -61,7 +61,7 @@ function Getintouch() {
                     required: "This field required",
                   })}
                 />
-                <label for="email" className="form__label">
+                <label htmlFor="email" className="form__label">
                   Email address
                 </label>
                 {errors?.email?.message && (
@@ -80,7 +80,7 @@ function Getintouch() {
                     required: "This field required",
                   })}
                 />
-                <label for="message" className="form__label">
+                <label htmlFor="message" className="form__label">
                   Message
                 </label>
                 {errors?.message?.message && (

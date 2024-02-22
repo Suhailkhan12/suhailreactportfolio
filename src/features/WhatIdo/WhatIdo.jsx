@@ -27,38 +27,47 @@ const defaultOptions = {
 
 const icon = [
   {
+    id: 1,
     html: <FaHtml5 />,
     color: "#E34C26",
   },
   {
+    id: 2,
     html: <FaCss3Alt />,
     color: "#2565AE",
   },
   {
+    id: 3,
     html: <FaSass />,
     color: "#FFC0CB",
   },
   {
+    id: 4,
     html: <IoLogoJavascript />,
     color: "#f7df1e",
   },
   {
+    id: 5,
     html: <FaReact />,
     color: "#04d8f9",
   },
   {
+    id: 6,
     html: <FaNode />,
     color: "#68A063",
   },
   {
+    id: 7,
     html: <FaBootstrap />,
     color: "#563d7c",
   },
   {
+    id: 8,
     html: <FaPython />,
     color: "#306998",
   },
   {
+    id: 9,
     html: <FaDatabase />,
     color: "#f29111",
   },
@@ -83,7 +92,7 @@ function WhatIdo({ whatdata }) {
         <h2 className="heading-2">{dowork}</h2>
         <div className="docontent__svg">
           {icon.map((item) => (
-            <figure className="docontent__svg--fig">
+            <figure className="docontent__svg--fig" key={item.id}>
               <div
                 className="docontent__svg--photo"
                 style={{ color: item.color }}

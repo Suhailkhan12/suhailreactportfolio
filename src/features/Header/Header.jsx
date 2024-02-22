@@ -39,7 +39,7 @@ function Header() {
           </div>
 
           <label
-            for="navi-toggle"
+            htmlFor="navi-toggle"
             className="navigation__button"
             onClick={handleToggleNav}
           >

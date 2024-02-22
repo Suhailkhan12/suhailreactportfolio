@@ -5,8 +5,6 @@ import { Link } from "react-scroll";
 function Hero({ intro }) {
   const { name, description, quality } = intro;
 
-  console.log(quality);
-
   return (
     <section className="hero">
       <span className="heading-4  hero__subheading">Hi, my name is</span>
