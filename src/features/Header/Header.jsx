@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./header.scss";
 import Headroom from "react-headroom";
 import Socialicon from "../Socialicon/Socialicon";
@@ -16,15 +16,6 @@ function Header({ headerdata }) {
   function handleToggleNav() {
     setmenuShow((s) => !s);
   }
-
-  useEffect(() => {
-    const element = document.getElementById("personal__portfolio");
-    if (menushow === false) {
-      element.style.overflow = "hidden";
-    } else {
-      element.style.overflow = "scroll";
-    }
-  }, [menushow]);
 
   return (
     <>
