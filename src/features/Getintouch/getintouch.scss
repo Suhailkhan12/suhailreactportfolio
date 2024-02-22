@@ -15,7 +15,7 @@
   grid-column: center-start / center-end;
   padding: 6rem 0;
   @include respond(tab-land) {
-    padding: 2rem 0 0 6rem;
+    padding: 2rem 0 6rem 0;
   }
 }
 
