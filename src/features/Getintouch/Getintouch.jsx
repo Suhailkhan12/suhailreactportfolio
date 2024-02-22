@@ -1,8 +1,13 @@
 import { useForm } from "react-hook-form";
 import "./getintouch.scss";
 import useCreateForm from "./useCreateForm";
+import useAnimationref from "../hooks/useAnimationref";
+import { motion } from "framer-motion";
+import { appearence } from "../../animations/animations";
 
 function Getintouch() {
+  const { ref, maincontrol } = useAnimationref();
+
   const { register, handleSubmit, reset, formState } = useForm({});
   const { errors } = formState;
 
@@ -24,10 +29,23 @@ function Getintouch() {
 
   return (
     <>
-      <h2 className="heading-2 row" id="contact__id">
+      <motion.h2
+        variants={appearence}
+        initial="hidden"
+        animate={maincontrol}
+        ref={ref}
+        className="heading-2 row"
+        id="contact__id"
+      >
         Get in Touch
-      </h2>
-      <section className="section-get">
+      </motion.h2>
+      <motion.section
+        variants={appearence}
+        initial="hidden"
+        animate={maincontrol}
+        ref={ref}
+        className="section-get"
+      >
         <div className="get">
           <div className="get__form">
             <form
@@ -100,7 +118,7 @@ function Getintouch() {
             </form>
           </div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }
