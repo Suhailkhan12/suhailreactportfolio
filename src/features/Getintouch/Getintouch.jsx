@@ -92,7 +92,7 @@ function Getintouch() {
 
               <div className="form__group">
                 <button className="btn" disabled={isCreating}>
-                  Send &rarr;
+                  Send
                 </button>
               </div>
             </form>
