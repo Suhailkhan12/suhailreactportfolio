@@ -24,7 +24,9 @@ function Getintouch() {
 
   return (
     <>
-      <h2 className="heading-2 row">Get in Touch</h2>
+      <h2 className="heading-2 row" id="contact__id">
+        Get in Touch
+      </h2>
       <section className="section-get">
         <div className="get">
           <div className="get__form">

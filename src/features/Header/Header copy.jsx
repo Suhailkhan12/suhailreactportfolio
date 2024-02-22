@@ -7,9 +7,8 @@ import { Link as Link1 } from "react-router-dom";
 import Resume from "../../assets/Resume.pdf";
 import { motion } from "framer-motion";
 import useAnimationref from "../hooks/useAnimationref";
-import { smallHeadingcrunch } from "../../animations/animations";
 
-function Header({ headerdata }) {
+function Header() {
   const [menushow, setmenuShow] = useState(true);
   const { maincontrol, ref } = useAnimationref();
 
@@ -76,32 +75,37 @@ function Header({ headerdata }) {
             }
           >
             <ul className="navigation__list">
-              {headerdata.map((item) => (
-                <motion.li
-                  ref={ref}
-                  variants={smallHeadingcrunch}
-                  initial="hidden"
-                  animate={maincontrol}
-                  className="navigation__item"
-                  key={item.id}
+              <li className="navigation__item">
+                <Link
+                  to="about__id"
+                  smooth={true}
+                  onClick={handleToggleNav}
+                  className="navigation__link"
                 >
-                  <Link
-                    to={item.id}
-                    smooth={true}
-                    onClick={handleToggleNav}
-                    className="navigation__link"
-                  >
-                    {item.name}
-                  </Link>
-                </motion.li>
-              ))}
-              <motion.li
-                ref={ref}
-                variants={smallHeadingcrunch}
-                initial="hidden"
-                animate={maincontrol}
-                className="navigation__item"
-              >
+                  About Me
+                </Link>
+              </li>
+              <li className="navigation__item">
+                <Link
+                  to="skill__id"
+                  smooth={true}
+                  onClick={handleToggleNav}
+                  className="navigation__link"
+                >
+                  SKill
+                </Link>
+              </li>
+              <li className="navigation__item">
+                <Link
+                  to="project__id"
+                  smooth={true}
+                  onClick={handleToggleNav}
+                  className="navigation__link"
+                >
+                  My Project
+                </Link>
+              </li>
+              <li className="navigation__item">
                 <Link1
                   to={Resume}
                   download="Resume"
@@ -111,7 +115,7 @@ function Header({ headerdata }) {
                 >
                   Resume
                 </Link1>
-              </motion.li>
+              </li>
             </ul>
             <Socialicon />
           </nav>

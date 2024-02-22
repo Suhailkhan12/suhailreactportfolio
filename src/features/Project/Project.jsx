@@ -1,10 +1,14 @@
+import { motion } from "framer-motion";
 import { useState } from "react";
 import "./project.scss";
 import Projectcard from "./Projectcard";
+import useAnimationref from "../hooks/useAnimationref";
+import { appearence } from "../../animations/animations";
 
 function Project({ projectdata }) {
   const [visible, setVisible] = useState(3);
   const [btnstate, setBtnstate] = useState(true);
+  const { ref, maincontrol } = useAnimationref();
 
   function showClickProject() {
     if (visible <= projectdata.length) {
@@ -17,7 +21,15 @@ function Project({ projectdata }) {
   return (
     <>
       <div className="projects" id="project__id">
-        <h2 className="projects__heading heading-2 mb-lg">My Projects</h2>
+        <motion.h2
+          ref={ref}
+          variants={appearence}
+          initial="hidden"
+          animate={maincontrol}
+          className="projects__heading heading-2 mb-lg"
+        >
+          My Projects
+        </motion.h2>
         {projectdata.slice(0, visible).map((item) => (
           <Projectcard data={item} key={item.id} />
         ))}

@@ -1,13 +1,30 @@
-import "./about.scss";
+import { motion } from "framer-motion";
 import { HiArrowRightCircle } from "react-icons/hi2";
+import useAnimationref from "../hooks/useAnimationref";
+import "./about.scss";
+import {
+  appearence,
+  pathVariantsone,
+  pathVariantstwo,
+} from "../../animations/animations";
 
 function About({ about }) {
   const { aboutdesc, paragraph, skillone, skilltwo, imageURL } = about;
+  const { maincontrol, ref } = useAnimationref();
 
   return (
     <>
-      <section className="content" id="about__id">
-        <h2 className="heading-2 mb-lg">{aboutdesc}</h2>
+      <motion.section
+        variants={pathVariantsone}
+        initial="hidden"
+        animate={maincontrol}
+        ref={ref}
+        className="content"
+        id="about__id"
+      >
+        <motion.h2 variants={appearence} className="heading-2 mb-lg">
+          {aboutdesc}
+        </motion.h2>
         {paragraph.map((par) => (
           <p className="paragraph" key={par}>
             {par}
@@ -36,13 +53,19 @@ function About({ about }) {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      <section className="image">
+      <motion.section
+        ref={ref}
+        variants={pathVariantstwo}
+        initial="hidden"
+        animate={maincontrol}
+        className="image"
+      >
         <figure className="image__fig">
           <img src={imageURL} alt={aboutdesc} className="image__fig--photo" />
         </figure>
-      </section>
+      </motion.section>
     </>
   );
 }

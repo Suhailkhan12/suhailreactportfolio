@@ -1,4 +1,4 @@
-import "./WhatIdo.scss";
+import { motion } from "framer-motion";
 import {
   FaCss3Alt,
   FaSass,
@@ -9,9 +9,16 @@ import {
   FaPython,
   FaDatabase,
 } from "react-icons/fa6";
-import { IoLogoJavascript } from "react-icons/io5";
-import ImageFullStack from "../../assets/fullstack.svg";
 import { Tilt } from "react-tilt";
+import { IoLogoJavascript } from "react-icons/io5";
+import "./WhatIdo.scss";
+import ImageFullStack from "../../assets/fullstack.svg";
+import {
+  appearence,
+  pathVariantsone,
+  pathVariantstwo,
+} from "../../animations/animations";
+import useAnimationref from "../hooks/useAnimationref";
 
 const defaultOptions = {
   reverse: true, // reverse the tilt direction
@@ -75,20 +82,40 @@ const icon = [
 
 function WhatIdo({ whatdata }) {
   const { title, dowork } = whatdata;
+  const { maincontrol, ref } = useAnimationref();
 
   return (
     <>
-      <h2 className="heading-2 dotitle" id="skill__id">
+      <motion.h2
+        variants={appearence}
+        initial="hidden"
+        animate={maincontrol}
+        ref={ref}
+        className="heading-2 dotitle"
+        id="skill__id"
+      >
         {title}
-      </h2>
-      <section className="do">
+      </motion.h2>
+      <motion.section
+        variants={pathVariantsone}
+        initial="hidden"
+        animate={maincontrol}
+        className="do"
+        ref={ref}
+      >
         <Tilt options={defaultOptions}>
           <figure className="do__fig">
             <img src={ImageFullStack} alt="" className="do__fig--photo" />
           </figure>
         </Tilt>
-      </section>
-      <section className="docontent">
+      </motion.section>
+      <motion.section
+        ref={ref}
+        variants={pathVariantstwo}
+        initial="hidden"
+        animate={maincontrol}
+        className="docontent"
+      >
         <h2 className="heading-2">{dowork}</h2>
         <div className="docontent__svg">
           {icon.map((item) => (
@@ -109,7 +136,7 @@ function WhatIdo({ whatdata }) {
             <li>Building RESTful APIs in Express</li>
           </ul>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }

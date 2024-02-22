@@ -1,4 +1,11 @@
 let resumeData = {
+  header: [
+    { name: "About Me", id: "about__id" },
+    { name: "SKill", id: "skill__id" },
+    { name: "My Project", id: "project__id" },
+    { name: "Contact", id: "contact__id" },
+  ],
+
   intro: {
     name: "Suhail khan",
     description:
