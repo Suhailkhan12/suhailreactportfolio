@@ -26,6 +26,8 @@
 
     @include respond(tab-land) {
       gap: 0;
+      min-width: 0;
+      max-width: max-content;
     }
 
     &--icon {
