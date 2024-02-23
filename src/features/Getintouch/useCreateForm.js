@@ -1,6 +1,5 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-// import { createEditCabin } from "../../services/apiCabins";
-import { createFormData } from "../../services/apiforms";
+import { createFormData } from "../../services/supabase/apiforms";
 import { toast } from "react-hot-toast";
 
 function useCreateForm() {
@@ -11,7 +10,7 @@ function useCreateForm() {
     onSuccess: () => {
       toast.success("Succesfully Send");
       queryClient.invalidateQueries({
-        queryKey: ["formdata"],
+        queryKey: ["formdatas"],
       });
     },
     OnError: (err) => toast.error(err.message),

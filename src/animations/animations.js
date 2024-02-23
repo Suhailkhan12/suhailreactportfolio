@@ -8,7 +8,10 @@ export const pathVariantsone = {
     opacity: 1,
     transition: {
       duration: 0.8,
-      ease: "easeInOut",
+      type: "spring",
+      mass: 0.4,
+      damping: 5,
+      when: "beforeChildren",
     },
   },
 };
@@ -23,7 +26,11 @@ export const pathVariantstwo = {
     opacity: 1,
     transition: {
       duration: 0.8,
-      ease: "easeInOut",
+      type: "spring",
+      mass: 0.4,
+      damping: 5,
+
+      when: "beforeChildren",
     },
   },
 };
@@ -38,7 +45,11 @@ export const smallHeadingcrunch = {
     opacity: 1,
     transition: {
       duration: 0.2,
-      ease: "easeInOut",
+      type: "spring",
+      mass: 0.4,
+      damping: 5,
+      when: "beforeChildren",
+      staggerChildren: 5,
     },
   },
 };
@@ -51,7 +62,11 @@ export const appearence = {
     opacity: 1,
     transition: {
       duration: 1.3,
-      ease: "easeInOut",
+      type: "spring",
+      mass: 0.4,
+      damping: 5,
+      when: "beforeChildren",
+      staggerChildren: 5,
     },
   },
 };

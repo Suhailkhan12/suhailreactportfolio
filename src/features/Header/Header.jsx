@@ -7,7 +7,7 @@ import { Link as Link1 } from "react-router-dom";
 import Resume from "../../assets/Resume.pdf";
 import { motion } from "framer-motion";
 import useAnimationref from "../hooks/useAnimationref";
-import { smallHeadingcrunch } from "../../animations/animations";
+import { appearence, smallHeadingcrunch } from "../../animations/animations";
 
 function Header({ headerdata }) {
   const [menushow, setmenuShow] = useState(true);
@@ -66,7 +66,13 @@ function Header({ headerdata }) {
                 : "navigation__nav navigation__nav-open"
             }
           >
-            <ul className="navigation__list">
+            <motion.ul
+              ref={ref}
+              variants={appearence}
+              initial="hidden"
+              animate={maincontrol}
+              className="navigation__list"
+            >
               {headerdata.map((item) => (
                 <motion.li
                   ref={ref}
@@ -103,7 +109,7 @@ function Header({ headerdata }) {
                   Resume
                 </Link1>
               </motion.li>
-            </ul>
+            </motion.ul>
             <Socialicon />
           </nav>
         </div>
