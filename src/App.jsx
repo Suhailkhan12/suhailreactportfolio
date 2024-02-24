@@ -1,8 +1,11 @@
+import { Routes, Route } from "react-router-dom";
 import Header from "./features/Header/Header";
 import Spinner from "./features/spinner/spinner.component";
 // import resumeData from "../Projectdata";
 import Home from "./Pages/Home";
 import useResumeData from "./useResumeData";
+import Slidertest from "./features/Slidertest/Slidertest";
+
 // import { useEffect } from "react";
 // import { getDataAndDocuments } from "./services/firebase/firebase.utils";
 
@@ -32,7 +35,10 @@ function App() {
   return (
     <>
       <Header headerdata={resumeData.header} />
-      <Home resumeData={resumeData} />
+      <Routes>
+        <Route path="/" element={<Home resumeData={resumeData} />} />
+        <Route path="/slider" element={<Slidertest />} />
+      </Routes>
     </>
   );
 }

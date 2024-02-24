@@ -25,7 +25,8 @@
     "react-supabase": "^0.2.0",
     "react-tilt": "^1.0.2",
     "react-typed": "^2.0.12",
-    "sass": "^1.71.0"
+    "sass": "^1.71.0",
+    "swiper": "^11.0.6"
   },
   "devDependencies": {
     "@types/react": "^18.2.55",
