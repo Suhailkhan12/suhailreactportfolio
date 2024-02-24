@@ -108,6 +108,15 @@ function Header({ headerdata }) {
                 >
                   Resume
                 </Link1>
+              </motion.li>
+
+              <motion.li
+                ref={ref}
+                variants={smallHeadingcrunch}
+                initial="hidden"
+                animate={maincontrol}
+                className="navigation__item"
+              >
                 <Link1 to="/slider" className="navigation__link">
                   Slider
                 </Link1>
