@@ -99,7 +99,7 @@ function Header({ headerdata }) {
                 animate={maincontrol}
                 className="navigation__item"
               >
-                {/* <Link1
+                <Link1
                   to={Resume}
                   download="Resume"
                   target="_blank"
@@ -107,9 +107,9 @@ function Header({ headerdata }) {
                   className="navigation__link"
                 >
                   Resume
-                </Link1> */}
+                </Link1>
                 <Link1 to="/slider" className="navigation__link">
-                  Resume
+                  Slider
                 </Link1>
               </motion.li>
             </motion.ul>
