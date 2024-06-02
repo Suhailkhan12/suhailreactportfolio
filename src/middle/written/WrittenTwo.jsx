@@ -11,8 +11,8 @@ const data = [
 function WrittenTwo() {
   return (
     <div>
-      <h3 className="paragraph pink">FEATURES</h3>
-      <h4 className="heading-3">uifry premium</h4>
+      <h3 className="paragraph pink">ADVATAGES</h3>
+      <h4 className="heading-3">Why Choose Uifry?</h4>
       <div className="mt-md">
         {data.map((item) => (
           <>

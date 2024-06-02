@@ -11,8 +11,8 @@ const data = [
 function Writtenthree() {
   return (
     <div>
-      <h3 className="paragraph pink">FEATURES</h3>
-      <h4 className="heading-3">uifry premium</h4>
+      {/* <h3 className="paragraph pink">FEATURES</h3>
+      <h4 className="heading-3">uifry premium</h4> */}
       <div className="mt-md">
         {data.map((item) => (
           <>
