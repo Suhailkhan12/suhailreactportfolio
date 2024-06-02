@@ -1,0 +1,30 @@
+.faqs {
+  max-width: 109rem;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+  row-gap: 1rem;
+
+  &__one {
+    width: 50%;
+  }
+
+  &__two {
+    width: 50%;
+  }
+}
+
+.text-left {
+  text-align: left;
+}
+
+.headeralign {
+  min-width: 106rem;
+
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}

@@ -8,6 +8,7 @@ import Middle from "../middle/Middle";
 import Middletwo from "../middle/Middletwo";
 import MiddleThree from "../middle/MiddleThree";
 import Testimonial from "../middle/Testimonial";
+import Faqs from "../faq/Faqs";
 
 function Home({ resumeData }) {
   return (
@@ -17,6 +18,7 @@ function Home({ resumeData }) {
       <Middletwo />
       <MiddleThree />
       <Testimonial />
+      <Faqs />
       {/* <About about={resumeData.about} />
       <WhatIdo whatdata={resumeData.whatidoref} />
       <Project projectdata={resumeData.projectdata} /> */}
