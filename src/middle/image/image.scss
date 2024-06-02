@@ -16,6 +16,15 @@
 
     z-index: 3;
   }
+
+  &__testimage {
+    position: absolute;
+    top: 4rem;
+    left: -2rem;
+
+    z-index: 3;
+  }
+
   &__dot {
     position: absolute;
     top: 2rem;
