@@ -1,0 +1,27 @@
+.partone {
+  width: 50%;
+
+  &__ellipse {
+    position: relative;
+    transform: translateX(-8rem);
+  }
+  &__ellipsetwo {
+    position: relative;
+  }
+
+  &__front {
+    position: absolute;
+    top: 4rem;
+    left: 15rem;
+
+    z-index: 3;
+  }
+  &__dot {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+
+    z-index: 2;
+    transform: rotateZ(15deg);
+  }
+}
