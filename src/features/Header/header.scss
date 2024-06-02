@@ -1,19 +1,20 @@
 @import "../../sass/mixins.scss";
 
 .navigation {
-  position: relative;
   z-index: 999;
 
-  min-height: 9rem;
-  padding: 0 4rem;
-  backdrop-filter: blur(10px);
-  border-bottom: 0.1px solid rgba(0, 0, 0, 0.02);
+  max-height: 6rem;
+  min-width: 109rem;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: auto;
 
-  position: relative;
+  position: fixed;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, 25%);
 
   &__logo {
     height: 5rem;
@@ -21,38 +22,9 @@
     &--img {
       height: 100%;
     }
-  }
-
-  &__button,
-  &__icon,
-  &__backgroung {
-    display: none;
-
-    @include respond(tab-land) {
-      display: block;
-    }
-  }
-
-  &__button {
-    @include respond(tab-land) {
-      // background-color: var(--color-white);
-      // height: 7rem;
-      // width: 7rem;
-      position: absolute;
-      top: 50%;
-      right: 3rem;
-
-      z-index: 2000;
-      box-shadow: 0 1rem 3rem rgba(var(--color-black), 0.15);
-      text-align: center;
-      cursor: pointer;
-    }
-
-    @include respond(phone) {
-      position: absolute;
-      top: 50%;
-      right: 3rem;
-    }
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 
   &__icon {
@@ -100,81 +72,6 @@
     }
   }
 
-  &__background {
-    @include respond(tab-land) {
-      height: 6rem;
-      width: 6rem;
-      border-radius: 50%;
-      position: fixed;
-      top: 3.5rem;
-      right: 3.5rem;
-      background-image: radial-gradient(
-        var(--color-primary),
-        var(--color-primary-light)
-      );
-      z-index: 1000;
-
-      transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-
-      &-open {
-        transform: scale(80);
-      }
-
-      // transform: scale(80);
-    }
-
-    @include respond(phone) {
-      top: 2.5rem;
-      right: 2.5rem;
-    }
-  }
-
-  &__nav {
-    @include respond(tab-land) {
-      height: 95vh;
-
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1500;
-
-      opacity: 0;
-      width: 0;
-      visibility: hidden;
-
-      transition: all 0.8s cubic-bezier(0, 1.04, 0.49, 1.01);
-
-      &-open {
-        opacity: 1;
-        width: 100%;
-        visibility: visible;
-      }
-    }
-  }
-
-  &__list {
-    display: flex;
-    align-items: center;
-    list-style: none;
-
-    @include respond(tab-land) {
-      flex-direction: column;
-      text-align: center;
-      justify-content: center;
-      width: inherit;
-      height: inherit;
-    }
-  }
-
-  &__item {
-    &:not(:last-child) {
-      margin-right: 2rem;
-    }
-    @include respond(tab-land) {
-      margin: 1rem;
-    }
-  }
-
   &__link {
     display: block;
     font-size: 1.5rem;
@@ -204,5 +101,21 @@
       background-position: 100%;
       color: var(--color-primary);
     }
+  }
+}
+
+.btnheader {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 0rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.1rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: var(--color-primary-dark);
   }
 }

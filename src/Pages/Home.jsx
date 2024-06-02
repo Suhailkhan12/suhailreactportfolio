@@ -4,19 +4,16 @@ import About from "../features/About/About";
 import Project from "../features/Project/Project";
 import WhatIdo from "../features/WhatIdo/WhatIdo";
 import Footer from "../features/Footer/Footer";
-import Gmail from "../features/Gmail/Gmail";
-import Getintouch from "../features/Getintouch/Getintouch";
 
 function Home({ resumeData }) {
   return (
     <main className="container">
       <Hero intro={resumeData.intro} />
-      <About about={resumeData.about} />
+      {/* <About about={resumeData.about} />
       <WhatIdo whatdata={resumeData.whatidoref} />
-      <Project projectdata={resumeData.projectdata} />
-      <Getintouch />
-      <Footer footerdata={resumeData.footercontent} />
-      <Gmail />
+      <Project projectdata={resumeData.projectdata} /> */}
+      {/* 
+      <Footer footerdata={resumeData.footercontent} /> */}
     </main>
   );
 }

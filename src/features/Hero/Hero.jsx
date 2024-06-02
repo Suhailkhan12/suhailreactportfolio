@@ -1,51 +1,67 @@
 import "./hero.scss";
-import { ReactTyped } from "react-typed";
-import { Link } from "react-scroll";
-import useAnimationref from "../hooks/useAnimationref";
-import { motion } from "framer-motion";
-import { pathVariantsone, pathVariantstwo } from "../../animations/animations";
+import One from "../../assets/heroimageone.svg";
+import Dot from "../../assets/dot.svg";
+import Front from "../../assets/front.svg";
+import Back from "../../assets/back.svg";
+import Ellipse from "../../assets/ellipse.svg";
+import Star from "../../assets/star.svg";
+
+import Backback from "../../assets/backback.svg";
+import { HiArrowRight } from "react-icons/hi2";
+import { IoPlayCircleOutline } from "react-icons/io5";
 
 function Hero({ intro }) {
-  const { ref, maincontrol } = useAnimationref();
-
-  const { name, description, quality } = intro;
-
   return (
     <section className="hero">
-      <motion.span
-        ref={ref}
-        variants={pathVariantsone}
-        initial="hidden"
-        animate={maincontrol}
-        className="heading-4  hero__subheading"
-      >
-        Hi, my name is
-      </motion.span>
-      <motion.h1
-        ref={ref}
-        variants={pathVariantsone}
-        initial="hidden"
-        animate={maincontrol}
-        className="heading-1 hero__heading"
-      >
-        {name}.
-        <br />
-        <span>{"<"}</span>
-        <ReactTyped strings={quality} typeSpeed={40} backSpeed={50} loop />
-        <span>{"/>"}</span>
-      </motion.h1>
-      <motion.p
-        ref={ref}
-        variants={pathVariantstwo}
-        initial="hidden"
-        animate={maincontrol}
-        className="hero__para paragraph heading-4--dark"
-      >
-        {description}
-      </motion.p>
-      <Link to="project__id" smooth={true} className=" btn">
-        Portfolio
-      </Link>
+      <div className="hero__one">
+        <img src={Dot} alt="Dot" className="hero__one__dot" />
+        <h2 className="heading-1">Make The Best Financial Decisions</h2>
+        <p className="paragraph capitalize">
+          Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet
+          faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.
+        </p>
+        <div className="hero__one__button">
+          <div className="readyflex btn blackherobtn">
+            Get Started
+            <HiArrowRight />
+          </div>
+          <div className="readyflex btn whiteherobtn">
+            <IoPlayCircleOutline className="size" /> Watch Video
+          </div>
+        </div>
+        <div className="starone">
+          <img src={Star} alt="one" />
+        </div>
+        <div className="startwo">
+          <img src={Star} alt="one" />
+        </div>
+        <div className="starthree">
+          <img src={Star} alt="one" />
+        </div>
+        <div className="starfour">
+          <img src={Star} alt="one" />
+        </div>
+        <div className="imagewrapper">
+          <img src={One} alt="one" />
+        </div>
+      </div>
+      <div className="hero__two">
+        <div className="hero__two__front">
+          <img src={Front} alt="Iphone" />
+        </div>
+        <div className="hero__two__back">
+          <img src={Back} alt="Iphone" />
+        </div>
+        <div className="hero__two__backback">
+          <img src={Backback} alt="Iphone" />
+        </div>
+        <div className="hero__two__ellipse">
+          <img src={Ellipse} alt="Iphone" className="hero__two__ellipse__img" />
+        </div>
+        <div className="hero__two__dot">
+          <img src={Dot} alt="Iphone" className="hero__two__ellipse__img" />
+        </div>
+      </div>
     </section>
   );
 }

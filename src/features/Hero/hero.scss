@@ -1,46 +1,120 @@
 @import "../../sass/mixins.scss";
 
 .hero {
-  grid-column: full-start / full-end;
+  max-width: 109rem;
+
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   row-gap: 1rem;
-  padding: 0 9rem;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba($color-body-dark, 0.7),
-      rgba($color-body-light, 0.7)
-    ),
-    url(../../assets/backtwo.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 
-  @include respond(tab-land) {
-    padding: 0 3rem;
-  }
-
-  &__heading {
-    margin-bottom: 1rem;
-  }
-
-  &__subheading {
-    line-height: 1;
-    color: var(--color-primary);
-    font-family: $font-display-one;
-  }
-
-  &__para {
+  &__one {
     width: 60%;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 
-    @include respond(phone) {
-      width: 100%;
+    &__dot {
+      position: absolute;
+      z-index: -1;
+      top: -20%;
+      right: 5%;
+    }
+
+    &__button {
+      display: flex;
+      gap: 1rem;
     }
   }
+  &__two {
+    width: 40%;
 
-  &__heading {
-    width: 90%;
+    &__front {
+      max-height: 50.4rem;
+      position: absolute;
+      top: 5rem;
+      left: 70rem;
+      z-index: 3;
+    }
+    &__back {
+      max-height: 50.4rem;
+      position: absolute;
+      top: 13rem;
+      left: 82rem;
+      z-index: 2;
+    }
+    &__backback {
+      max-height: 50.4rem;
+      position: absolute;
+      top: 21rem;
+      left: 94rem;
+      z-index: 1;
+    }
+    &__dot {
+      position: absolute;
+      top: 25rem;
+      left: 64rem;
+      z-index: -1;
+    }
+    &__ellipse {
+      max-height: 30.4rem;
+      position: absolute;
+      top: 3rem;
+      left: 75rem;
+      z-index: 0;
+
+      &__img {
+        height: 70.4rem;
+      }
+    }
   }
+}
+
+.blackherobtn {
+  background-color: #000;
+  gap: 1rem;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-weight: 500;
+}
+
+.whiteherobtn {
+  background-color: #fff;
+  gap: 1rem;
+  color: #000 !important;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-weight: 500;
+}
+.size {
+  width: 4rem;
+  height: 4rem;
+}
+
+.imagewrapper {
+  max-height: 35.7rem;
+}
+
+.starone {
+  position: absolute;
+  top: -10rem;
+  left: -10rem;
+}
+
+.startwo {
+  position: absolute;
+  top: 35rem;
+  left: 10rem;
+}
+
+.starthree {
+  position: absolute;
+  top: -18rem;
+  right: -50rem;
+}
+.starfour {
+  position: absolute;
+  bottom: 10rem;
+  right: -10rem;
 }
