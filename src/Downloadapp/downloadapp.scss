@@ -1,0 +1,52 @@
+.dapp {
+  max-width: 109rem;
+  min-width: 108rem;
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  border-radius: 8px;
+  padding: 5rem;
+  background-color: black;
+  overflow: hidden;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+
+  &__one {
+    width: 55%;
+  }
+
+  &__two {
+    width: 45%;
+  }
+
+  &__imagewrapper {
+    &__img {
+      position: relative;
+      z-index: 50;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__linetwo {
+    transform: rotateZ(180deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+  }
+
+  &__dot {
+    position: absolute;
+    top: 20%;
+    right: -2%;
+    z-index: 2;
+  }
+}

@@ -1,7 +1,39 @@
-.footer {
-  grid-column: full-start / full-end;
-  text-align: center;
-  padding: 2rem;
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 109rem;
+  min-width: 108rem;
+  position: relative;
+  margin-bottom: 7rem;
+}
 
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+.column {
+  flex: 1 0 13%; /* 16.66% is approximately 1/6 of the width */
+  margin: 0.1%;
+
+  padding: 20px;
+
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.newsd {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 8px !important;
+}
+
+.inputemail {
+  border: none;
+  outline: none;
+  color: #5e5959;
+}
+
+.copyright {
+  padding: 4rem;
+  text-align: center;
+  border-top: 1px solid #696969;
 }
